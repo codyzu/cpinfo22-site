@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: " en-US" }}">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/stylesheet.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="{{ "/assets/js/copy.js" | relative_url }}"></script>
+  <!-- <script src="{{ "/assets/javascript/typing.js" | relative_url }}"></script> -->
+  <script>
+    function getElementHeightById(id) {
+      var element = document.getElementById(id);
+      if (element) {
+        return element.scrollHeight;
+      } else {
+        console.error("Element not found by ID: " + id);
+      }
+      return 0;
+    }
+  </script>
+  <style lang='windi'>
+    a {
+      @apply text-sky-600 hover:text-sky-400;
+    }
+
+    h1 {
+      @apply text-3xl font-bold mb-4;
+    }
+
+    h2 {
+      @apply text-2xl font-bold mb-3;
+    }
+
+    h3 {
+      @apply text-xl font-bold mb-1;
+    }
+
+    h4 {
+      @apply text-lg font-bold;
+    }
+
+    /* https://remarkablemark.org/blog/2021/06/01/add-copy-code-to-clipboard-button-to-jeyll-site/ */
+    /* https://github.com/remarkablemark/remarkablemark.github.io/blob/master/_sass/_code.scss */
+    /* https://github.com/remarkablemark/remarkablemark.github.io/blob/master/_layouts/post.html */
+    pre.highlight {
+      @apply relative;
+    }
+    pre.highlight .copy {
+      @apply 
+      text-gray-700
+      font-sans
+      text-xs 
+      absolute 
+      right-2 top-2 
+      opacity-0 
+      rounded-lg 
+      cursor-pointer
+      flex
+      flex-col
+      items-center
+      bg-gray-600
+      bg-opacity-60
+      border-2
+      border-gray-700
+      p-1;
+    }
+    pre.highlight .copy:active,pre.highlight .copy:hover,pre.highlight .copy:focus {
+      @apply opacity-100;
+    }
+    pre.highlight:active .copy,pre.highlight:focus .copy,pre.highlight:hover .copy {
+      @apply opacity-100;
+    }
+    .copy-icon {
+      @apply icon-sm !inline-block;
+    }
+    .icon-clipboard {
+      @apply inline-block;
+    }
+  </style>
+  {% seo %}
+</head>
+
+<body>
+  <div class="font-sans bg-white text-gray-900 min-h-screen bg-gradient-to-br from-white to-gray-200">
+    <div class="w-full backdrop-filter backdrop-blur-md fixed z-20 top-0 py-4">
+      <div class="max-w-screen-md mx-auto text-2xl font-bold"><a href="/">CPINFO-22</a></div>
+    </div>
+    <div class="max-w-screen-md mx-auto pt-16">{{ content }}</div>
+  </div>
+</body>
+
+</html>

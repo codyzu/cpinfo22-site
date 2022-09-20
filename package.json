@@ -1,0 +1,17 @@
+{
+  "name": "cpinfo2022-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "windicss:dev": "windicss -to assets/css/stylesheet.css --config windi.config.js --style --dev",
+    "windicss:build": "windicss -to assets/css/stylesheet.css --config windi.config.js --style --minify",
+    "windicss:analysis": "windicss-analysis"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@windicss/plugin-icons": "^1.0.2",
+    "windicss": "^3.5.6"
+  }
+}

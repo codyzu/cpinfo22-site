@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "name": "CPINFO-22 website",
+    "short_name": "cpinfo22",
+    "start_url": ".",
+    "display": "browser",
+    "background_color": "#fff",
+    "description": "Website with resources for CPINFO-22.",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "48x48",
+            "type": "image/svg+xml"
+        }
+    ]
+}
