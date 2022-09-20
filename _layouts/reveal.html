@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: " en-US" }}">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<title>{{ site.title }}</title>
+	<!-- <link rel="stylesheet" href="{{ "/assets/css/stylesheet.css" | relative_url }}"> -->
+	<!-- <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+	<!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
+	<link rel="icon" href="{{ "/favicon.svg" | relative_url }}" type="image/svg+xml">
+	<link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
+	<!-- <script defer src="{{ "/assets/js/copy.js" | relative_url }}"></script>
+	<script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.js"></script> -->
+	<link rel="stylesheet" href="{{ "/assets/reveal/reset.css" | relative_url }}">
+	<link rel="stylesheet" href="{{ "/assets/reveal/reveal.css" | relative_url }}">
+	<link rel="stylesheet" href="{{ "/assets/reveal/theme/white.css" | relative_url }}" id="theme">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="{{ "/assets/reveal/plugin/highlight/monokai.css" | relative_url }}" id="highlight-theme">
+	{% seo %}
+</head>
+
+<body>
+	<!-- <div class="fixed top-0 left-0">Back</div> -->
+	<div class="reveal">
+		<div class="slides">
+			<section data-markdown="{{ page.name | replace: ".html", "-slides.md" }}" data-separator="^\n\n\n" data-separator-vertical="^\n\n">
+			</section>
+		</div>
+	</div>
+
+	<script src="{{ "/assets/reveal/reveal.js" | relative_url }}"></script>
+	<script src="{{ "/assets/reveal/plugin/notes/notes.js" | relative_url }}"></script>
+	<script src="{{ "/assets/reveal/plugin/markdown/markdown.js" | relative_url }}"></script>
+	<script src="{{ "/assets/reveal/plugin/highlight/highlight.js" | relative_url }}"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>

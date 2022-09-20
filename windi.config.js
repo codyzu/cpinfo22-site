@@ -14,7 +14,9 @@ module.exports = defineConfig({
     exclude: [
       'node_modules/**/*',
       '.git/**/*',
-      '_site/**/*'
+      '_site/**/*',
+      'assets/reveal/**/*',
+      '**/*-slides.md'
     ]
   },
   theme: {
