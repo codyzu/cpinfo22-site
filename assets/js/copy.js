@@ -63,7 +63,7 @@ document
   iconDiv.className = 'icon-clipboard copy-icon';
   const labelDiv = document.createElement('div');
   labelDiv.className = 'copy-label'
-  const copyText = 'Copy';
+  const copyText = 'copy';
   labelDiv.innerText = copyText;
 
   button.appendChild(iconDiv);
@@ -77,7 +77,7 @@ document
     navigator.clipboard.writeText(code);
     // button.innerText = 'Copied';
     // const label = button.querySelector('div .copy-label')
-    labelDiv.innerText = 'Copied';
+    labelDiv.innerText = 'copied';
     setTimeout(function () {
       labelDiv.innerText = copyText;
     }, 4000);

@@ -52,7 +52,7 @@
     /* https://github.com/remarkablemark/remarkablemark.github.io/blob/master/_sass/_code.scss */
     /* https://github.com/remarkablemark/remarkablemark.github.io/blob/master/_layouts/post.html */
     pre.highlight {
-      @apply relative font-sans text-base;
+      @apply relative font-sans text-base overflow-x-auto;
     }
     pre.highlight .copy {
       @apply 
@@ -62,15 +62,16 @@
       absolute 
       right-2 top-2 
       opacity-0 
-      rounded-lg 
+      rounded-md 
       cursor-pointer
       flex
       flex-col
       items-center
-      bg-gray-600
       bg-opacity-60
-      border-2
+      border-1
       border-gray-700
+      backdrop-filter
+      backdrop-blur-md
       p-1;
     }
     pre.highlight .copy:active,pre.highlight .copy:hover,pre.highlight .copy:focus {
@@ -85,8 +86,8 @@
     .icon-clipboard {
       @apply inline-block;
     }
-    .highlight table pre {
-      @apply text-gray-600;
+    .highlight table td:first-child pre {
+      @apply text-gray-500 font-bold;
     }
   </style>
   {% seo %}

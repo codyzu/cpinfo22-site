@@ -10,7 +10,7 @@
     "jekyll": "docker run --rm --volume=\"$PWD:/srv/jekyll:Z\" -e JEKYLL_UID=\"$(id -u $(whoami))\" -e JEKYLL_GID=\"$(id -g $(whoami))\" jekyll/jekyll:pages jekyll build -b \"/\"",
     "build": "npm run windicss:build && npm run jekyll",
     "test": "echo $GID",
-    "dev": "nodemon -x 'npm run build && npx serve _site' -e html,md,js,css -i _site -i assets/css/stylesheet.css"
+    "dev": "nodemon -x 'npm run build && npx serve _site' -e html,md,js,css,jpg,jpeg,png,svg -i _site -i assets/css/stylesheet.css"
   },
   "author": "",
   "license": "ISC",
