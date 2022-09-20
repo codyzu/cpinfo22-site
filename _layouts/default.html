@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
   <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="{{ "/favicon.svg" | relative_url }}" type="image/svg+xml">
   <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script defer src="{{ "/assets/js/copy.js" | relative_url }}"></script>
@@ -52,7 +52,7 @@
     /* https://github.com/remarkablemark/remarkablemark.github.io/blob/master/_sass/_code.scss */
     /* https://github.com/remarkablemark/remarkablemark.github.io/blob/master/_layouts/post.html */
     pre.highlight {
-      @apply relative;
+      @apply relative font-sans text-base;
     }
     pre.highlight .copy {
       @apply 
