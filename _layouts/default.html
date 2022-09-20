@@ -13,20 +13,8 @@
   <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
   <link rel="icon" href="{{ "/favicon.svg" | relative_url }}" type="image/svg+xml">
   <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script defer src="{{ "/assets/js/copy.js" | relative_url }}"></script>
-  <!-- <script src="{{ "/assets/javascript/typing.js" | relative_url }}"></script> -->
-  <script>
-    function getElementHeightById(id) {
-      var element = document.getElementById(id);
-      if (element) {
-        return element.scrollHeight;
-      } else {
-        console.error("Element not found by ID: " + id);
-      }
-      return 0;
-    }
-  </script>
+  <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.js"></script>
   <style lang='windi'>
     a {
       @apply text-sky-600 hover:text-sky-400;
@@ -58,7 +46,8 @@
       @apply 
       text-gray-700
       font-sans
-      text-xs 
+      text-xs
+      leading-none
       absolute 
       right-2 top-2 
       opacity-0 
@@ -68,7 +57,7 @@
       flex-col
       items-center
       bg-opacity-60
-      border-1
+      border-2
       border-gray-700
       backdrop-filter
       backdrop-blur-md
@@ -79,6 +68,9 @@
     }
     pre.highlight:active .copy,pre.highlight:focus .copy,pre.highlight:hover .copy {
       @apply opacity-100;
+    }
+    .icon {
+      @apply !inline-block;
     }
     .copy-icon {
       @apply icon-sm !inline-block;

@@ -10,7 +10,7 @@ module.exports = defineConfig({
   safelist: ['icon-clipboard'],
   darkMode: 'class',
   extract: {
-    include: ['**/*.html', 'assets/**/*.js'],
+    include: ['**/*.html', 'assets/**/*.js', '**/*.md'],
     exclude: [
       'node_modules/**/*',
       '.git/**/*',
