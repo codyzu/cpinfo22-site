@@ -19,14 +19,14 @@ module.exports = defineConfig({
   },
   theme: {
     extend: {
-      colors: {
-        'scarlet-gum': '#3f1467',
-        'mint-green': '#99FF9C',
-        'bay-leaf': '#7bb08b'
-      },
-      fontFamily: {
-        sans: ['Poppins', 'sans-serif']
-      }
+      // colors: {
+      //   'scarlet-gum': '#3f1467',
+      //   'mint-green': '#99FF9C',
+      //   'bay-leaf': '#7bb08b'
+      // },
+      // fontFamily: {
+      //   sans: ['Poppins', 'sans-serif']
+      // }
     }
   },
   plugins: [
