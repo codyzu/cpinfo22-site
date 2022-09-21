@@ -34,6 +34,7 @@ github_username:  codyzu
 # plugins:
   # - jekyll-feed
 
+# https://github.com/jekyll/jekyll/issues/4619#issuecomment-191267346
 # More › http://kramdown.gettalong.org/quickref.html
 # Options › http://kramdown.gettalong.org/options.html
 kramdown:

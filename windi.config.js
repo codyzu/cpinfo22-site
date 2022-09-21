@@ -21,6 +21,9 @@ module.exports = defineConfig({
   },
   theme: {
     extend: {
+      animation: {
+        'bounce-double': 'bounce 0.8s ease-out 2.5'
+      }
       // colors: {
       //   'scarlet-gum': '#3f1467',
       //   'mint-green': '#99FF9C',
