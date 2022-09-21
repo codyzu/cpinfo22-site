@@ -2,9 +2,9 @@
 title: Home
 ---
 
-# Welcome to CPINFO-21 Web Development!
+# Welcome to CPINFO-22 Web Development!
 
-Here you will find resources for the CPINFO-21 web dev course.
+Here you will find resources for the CPINFO-22 web dev course.
 
 ---
 
@@ -12,7 +12,7 @@ Here you will find resources for the CPINFO-21 web dev course.
 
 ### 📺 [Presentation - Introduction](m1/intro.html)
 
-<--
+<!--
 ### 👩‍🔧 [Exercise 1.0: Espruino Weather Station](m1/espruino.html)
 
 ### 📺 [Presentation - Details](m1/details.html)
