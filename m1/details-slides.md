@@ -92,7 +92,7 @@ This course 👈 **modern** JavaScript (ECMAScript)
 
 
 # Object 📦
-* everything excpet `null` and `undefined`
+* everything except `null` and `undefined`
 * similar to hash table, map, record, struct, dictionary
 * object literals `{}`
 * keys
@@ -102,14 +102,14 @@ This course 👈 **modern** JavaScript (ECMAScript)
 
 
 # Array 📜
-* "spcial" Object: magic length
+* "special" Object: magic length
 * creation
 * `typeof` vs `Array.isArray()`
 * destructive operations
 * Array.prototype
 * functional
 * sorting
-* concatination and substrings
+* concatenation and substrings
 
 
 # `null` & `undefined` ❓
@@ -163,7 +163,7 @@ This course 👈 **modern** JavaScript (ECMAScript)
 # recursion & tail calls
 * es6 (but not implemented 😿)
 * only if function returns result of calling a function
-* optimation: recusrsion as fast as loops
+* optimization: recursion as fast as loops
 
 
 
@@ -198,7 +198,7 @@ This course 👈 **modern** JavaScript (ECMAScript)
 * objects are containers of properties
 * prototypes are objects
 * methods are functions, stored in objects
-* missing props 👉 undfined, unless prototype exists
+* missing props 👉 undefined, unless prototype exists
 
 
 * many object can share same prototype
@@ -214,12 +214,12 @@ This course 👈 **modern** JavaScript (ECMAScript)
 # JavaScript Inheritance
 
 
-## legacy construtors 👎
+## legacy constructors 👎
 * magic `new` operator
 
 
 ## class 👍 👎
-* "syntatic sugar" over legacy construtors, not true classes
+* "syntactic sugar" over legacy constructors, not true classes
 * `this` or that?
 * useful for migrating from other languages
 
