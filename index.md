@@ -12,9 +12,9 @@ Here you will find resources for the CPINFO-22 web dev course.
 
 ### 📺 [Presentation - Introduction](m1/intro.html)
 
-<!--
 ### 👩‍🔧 [Exercise 1.0: Espruino Weather Station](m1/espruino.html)
 
+<!--
 ### 📺 [Presentation - Details](m1/details.html)
 
 ### 👪 [Group Activity Results](m1/group-activity)
