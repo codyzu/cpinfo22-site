@@ -18,8 +18,8 @@ document
   // https://github.com/alpinejs/alpine/discussions/3003
   pre.setAttribute('x-data', 'copyButton')
   pre.setAttribute('x-ref', 'codeBlock')
-  pre.insertAdjacentHTML('beforeend', `
-  <button
+  pre.insertAdjacentHTML('beforeend', 
+  `<button
     @click="clicked"
     type="button"
     aria-label="Copy code to clipboard"
