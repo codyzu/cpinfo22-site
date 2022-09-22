@@ -21,19 +21,39 @@
     }
 
     h1 {
-      @apply text-3xl font-bold mb-4;
+      @apply text-3xl font-bold mb-2 mt-8;
     }
 
     h2 {
-      @apply text-2xl font-bold mb-3;
+      @apply text-2xl font-bold mb-1 mt-6;
     }
 
     h3 {
-      @apply text-xl font-bold mb-1;
+      @apply text-xl font-bold mb-1 mt-4;
     }
 
     h4 {
-      @apply text-lg font-bold;
+      @apply text-lg font-bold mt-2;
+    }
+
+    p {
+      @apply mt-0 mb-4;
+    }
+
+    ul {
+      @apply list-disc pl-8;
+    }
+
+    ol {
+      @apply list-decimal pl-8;
+    }
+    
+    li {
+      @apply list-item;
+    }
+
+    li+li {
+      @apply mt-1;
     }
 
     /* https://remarkablemark.org/blog/2021/06/01/add-copy-code-to-clipboard-button-to-jeyll-site/ */
@@ -90,7 +110,7 @@
     <div class="w-full backdrop-filter backdrop-blur-md fixed z-20 top-0 py-4">
       <div class="max-w-screen-md mx-auto text-2xl font-bold"><a href="{{ "/" | relative_url }}">CPINFO-22</a></div>
     </div>
-    <div class="max-w-screen-md mx-auto pt-16">{{ content }}</div>
+    <div class="max-w-screen-md mx-auto pt-16 break-words">{{ content }}</div>
   </div>
 </body>
 
