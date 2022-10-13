@@ -177,7 +177,7 @@ The SSD1306 OLED is a 128x64 resolution monochrome OLED display. It communicates
 
 #### ☑️ Exercise 5.1: Customize the page to return the current temperature, humidity, pressure.
 
-#### ☑️ Exercise 5.2: Imagine saving a history of the weather data... modify the program to record a log of data and return the data in the response. Consider adding a JavaScript graphing library such as ??? into the HTML page.
+#### ☑️ Exercise 5.2: Imagine saving a history of the weather data... modify the program to record a log of data and return the data in the response. Consider adding a JavaScript graphing library such as [chart.js](https://www.chartjs.org/) into the HTML page.
 
 ### 📖 Reference
 
