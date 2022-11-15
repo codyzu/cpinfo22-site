@@ -41,11 +41,11 @@
     }
 
     ul {
-      @apply list-disc pl-8;
+      @apply list-disc pl-8 mb-4;
     }
 
     ol {
-      @apply list-decimal pl-8;
+      @apply list-decimal pl-8 mb-4;
     }
     
     li {
@@ -108,9 +108,9 @@
 <body>
   <div class="font-sans bg-white text-gray-900 min-h-screen bg-gradient-to-br from-white to-gray-200">
     <div class="w-full backdrop-filter backdrop-blur-md fixed z-20 top-0 py-4">
-      <div class="max-w-screen-lg mx-auto text-2xl font-bold"><a href="{{ "/" | relative_url }}">CPINFO-22</a></div>
+      <div class="max-w-screen-lg mx-auto text-2xl font-bold px-3"><a href="{{ "/" | relative_url }}">CPINFO-22</a></div>
     </div>
-    <div class="max-w-screen-lg mx-auto pt-16 break-words">{{ content }}</div>
+    <div class="max-w-screen-lg mx-auto pt-16 break-words px-3">{{ content }}</div>
   </div>
 </body>
 
