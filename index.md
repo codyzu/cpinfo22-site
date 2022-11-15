@@ -19,8 +19,8 @@ Here you will find resources for the CPINFO-22 web dev course.
 
 ### 👪 [Group Activity Results](m1/group-activity)
 
+-->
 ---
-
 ## Module 2: APIs
 
 ### 👩‍🔧 [Exercise 2.0: APIs](m2/apis.html)
@@ -31,6 +31,7 @@ Here you will find resources for the CPINFO-22 web dev course.
 
 ### 👩‍🔧 [Exercise 3.0: Backend Web Service](m3/backend-web-server.html)
 
+<!--
 ---
 
 ## Module 4: NoSQL
