@@ -155,15 +155,8 @@ npm install --save node-fetch@2
 
 ℹ️ The `@2` installs the version 2 of `node-fetch`, that is compatible with commonjs.
 
-`node-fetch` will let us call other APIs.
+[`fetch`](https://developer.mozilla.org/fr/docs/Web/API/fetch) will let us call other APIs.
 
-Add node-fetch to the require statements at the top of `app.js`:
-```javascript
-const express = require('express');
-const fetch = require('node-fetch');
-
-// ...
-```
 
 Calling an API is "asynchronous", meaning the request happens in the background and our code will be notified when it is complete. node-fetch will let us make API requests using `promises` or `async/await` (this has the advantage of letting us use `try/catch` syntax for error handling).
 
@@ -191,7 +184,7 @@ app.get('/testasync', async (req, res) => {
 
 #### Hints:
 * A basic algorithm looks like this:
-  1. fetch the geographical latitude and longitude from the **here API**
+  1. fetch the geographical latitude and longitude from the **MapBox API**
   2. parse the longitude and latitude from the response
   3. fetch the weather for the longitude and latitude with the **OpenWeather API**
 * Remember that pug can iterate over an array of values by using the [`each`](https://pugjs.org/language/iteration.html#each) keyword (i.e. you should iterate over the 7 forecast days)
