@@ -4,6 +4,8 @@ redirect_from: /m3
 ---
 # 🌩 Module 3: Backend - Express server with templates
 
+## 🚧 temporary key: `260c7caff59a421d19bae73becede92d`
+
 <!-- There is a working version of this exercise [here](https://cpinfo-m2-express-pug.firebaseapp.com/). -->
 
 <!-- TODO: add screenshots + notes for day 1 exercise -->
