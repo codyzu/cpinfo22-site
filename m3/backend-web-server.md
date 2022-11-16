@@ -148,13 +148,6 @@ Inside our route handler, we can then access the value of the variable inside `r
 
 ## 5 Calling APIs
 
-Install [node-fetch](https://github.com/node-fetch/node-fetch) into your project:
-```cmd
-npm install --save node-fetch@2
-```
-
-ℹ️ The `@2` installs the version 2 of `node-fetch`, that is compatible with commonjs.
-
 [`fetch`](https://developer.mozilla.org/fr/docs/Web/API/fetch) will let us call other APIs.
 
 
