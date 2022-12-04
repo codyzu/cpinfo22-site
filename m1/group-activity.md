@@ -4,7 +4,8 @@ title: Java vs JavaScript
 
 # 1 Java vs JavaScript
 
-![java vs javascript](images/group1.jpg)
+![java vs javascript](images/group2.jpg)
+![example](images/group1.jpg)
 
 | |java|javascript|
 |-|-|-|
@@ -50,7 +51,7 @@ title: Java vs JavaScript
 
 # 3 Types in JavaScript
 
-![js types](images/group3.jpg)
+<!-- ![js types](images/group3.jpg) -->
 
 **📢 JavaScript is dynamically typed 🚨**
 
@@ -89,15 +90,19 @@ Inheritance:
 * JavaScript uses "prototypal inheritance" (subtle difference from class based inheritance)
 * The `class` keyword makes JavaScript appear like Java inheritance (even though it uses prototypes)
 
-# 4 What is npm
+# 4 Npm
 
-![npm](images/group2.jpg)
+![npm](images/group4.jpg)
+
+<!-- ![npm](images/group2.jpg) -->
 
 * npm registry is a public registry of node.js packages
 * npm cli tool is a tool to install/manage packages from the registry
 * yarn is an alternative cli tool
 
 # 5 SQL vs NoSQL 🤜💥🤛
+
+![sql vs nosql](images/group3.jpg)
 
 <!-- ![node.js](images/sql-vs-nosql.jpg) -->
 
