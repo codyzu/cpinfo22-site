@@ -31,7 +31,6 @@ Here you will find resources for the CPINFO-22 web dev course.
 
 ### 👩‍🔧 [Exercise 3.0: Backend Web Service](m3/backend-web-server.html)
 
-<!--
 ---
 
 ## Module 4: NoSQL
@@ -40,6 +39,7 @@ Here you will find resources for the CPINFO-22 web dev course.
 
 ### 👩‍🔧 [Adding Firestore to Express](m4/express-nosql)
 
+<!--
 ---
 
 ## Exam 1 📝
