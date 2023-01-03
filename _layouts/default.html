@@ -21,11 +21,11 @@
     }
 
     h1 {
-      @apply text-3xl font-bold mb-2 mt-8;
+      @apply text-3xl font-bold mb-4 mt-6 pb-2 border-b-1 border-gray-300;
     }
 
     h2 {
-      @apply text-2xl font-bold mb-1 mt-6;
+      @apply text-2xl font-bold mb-4 mt-6 pb-1 border-b-1 border-gray-300;
     }
 
     h3 {
@@ -56,11 +56,21 @@
       @apply mt-1;
     }
 
+    hr {
+      @apply h-1 p-0 my-4 border-0 bg-gray-300;
+    }
+
     /* https://remarkablemark.org/blog/2021/06/01/add-copy-code-to-clipboard-button-to-jeyll-site/ */
     /* https://github.com/remarkablemark/remarkablemark.github.io/blob/master/_sass/_code.scss */
     /* https://github.com/remarkablemark/remarkablemark.github.io/blob/master/_layouts/post.html */
+    /* min-height ensures the copy button doesn't get cut off on 1-liner code segments */
     pre.highlight {
-      @apply relative font-sans text-base overflow-x-auto;
+      @apply
+      relative
+      font-sans
+      text-base
+      overflow-x-auto
+      min-h-[4rem];
     }
     pre.highlight .copy {
       @apply 
