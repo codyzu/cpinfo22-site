@@ -23,18 +23,6 @@ React **is not** a complete framework for creating a web application. React prov
 
 Use your express weather app from the previous course.
 
-1. **⚠️ Change your express app to use port `4000`.** The react development server will use port `3000` so it must be free to avoid conflicts.
-
-   At the top of the `app.js` file, change the code that starts your express server to use port `4000`. The code that starts express should resemble:
-
-   ```javascript
-   const app = express();
-   const port = 4000;
-   app.listen(port, () =>
-     console.log(`Example app listening on port ${port}!`)
-   );
-   ```
-
 1. Refactor your express server so that it has 2 routes:
 
    1. `/weather/:city` 👉 renders the pug template with the forecast
@@ -89,7 +77,7 @@ Use your express weather app from the previous course.
   <!-- TODO: consider `npm init react-app weather-app` -->
    ```cmd
    cd ..
-   npm init react-app weather-app
+   npm create vite@latest weather-app -- --template react
    ```
 
    You should now have 2 _separate_ projects:
@@ -104,30 +92,39 @@ Use your express weather app from the previous course.
      - `weather-app/`
        - `package.json`
        - `src/`
-         - `index.js`
+         - `main.jsx`
          - ...
        - `public/`
          - ...
        - ...
 
-1. Delete everything inside `weather-app/src`
+<!-- 1. Delete everything inside `weather-app/src` **except** `main.js` -->
+
+1. Install the dependencies:
+
    ```cmd
    cd weather-app
-   cd src
-   del *
-   cd ..
-   ```
-1. Configure the proxy in `package.json` to hit the express app.
-
-   Our react development server does not know about our express server running on port `4000`. We can [configure it to "proxy"](https://create-react-app.dev/docs/proxying-api-requests-in-development/) any unknown URLs to our express server.
-
-   Inside `weather-app/package.json` add the following line (**add a comma depending on where you add the line**):
-
-   ```json
-   "proxy": "http://localhost:4000"
+   npm install
    ```
 
-1. Add the file `weather-app/src/index.js`:
+1. Configure the proxy in `vite.config.js` to hit the express app.
+
+   Our vitejs development server does not know about our express server running on port `3000`. We can [configure it to "proxy"](https://vitejs.dev/config/server-options.html#server-proxy) certain URLs to our express server.
+
+   Inside `weather-app/vite.config.js`, modify the `defineConfig` line to match the code below:
+
+   ```js
+   export default defineConfig({
+     plugins: [react()],
+     server:{
+       proxy: {
+         '/api': 'http://localhost:3000'
+       }
+     }
+   })
+   ```
+
+<!-- 1. Remove the css import the file `weather-app/src/main.jsx`:
 
    ```jsx
    import React from "react";
@@ -136,7 +133,7 @@ Use your express weather app from the previous course.
    // YOUR CODE HERE
 
    ReactDOM.render(<App />, document.getElementById("root"));
-   ```
+   ``` -->
 
 ## 5 Components
 
@@ -211,26 +208,30 @@ const ShoppingList = props => (
 
 ## 7 Hello World
 
-1. Inside `weather-app/src/index.js` add the following code:
+1. **Replace** the contents `weather-app/src/main.jsx` with the following:
 
    ```jsx
-   import React from "react";
-   import ReactDOM from "react-dom";
+   import React from 'react'
+   import ReactDOM from 'react-dom/client'
 
    const App = props => <div>Hello {props.name}</div>;
 
-   ReactDOM.render(<App name="Cody" />, document.getElementById("root"));
+   ReactDOM.createRoot(document.getElementById('root')).render(
+     <React.StrictMode>
+       <App />
+     </React.StrictMode>,
+   )   
    ```
 
 1. In the terminal, inside the `weather-app` directory run:
 
    ```cmd
-   npm run start
+   npm run dev
    ```
 
    The above command should open a window in Chrome with a single button.
 
-   ⚠️ If Windows opens the Edge browser, open http://localhost:3000 in Chrome.
+   ⚠️ If Windows opens the Edge browser, open http://localhost:5173 in Chrome.
 
 1. Inspect the html generated on the page (F12):
 
@@ -252,7 +253,7 @@ const ShoppingList = props => (
 
 Next we will add the 2 components that will make up our app: `<SearchBar>` and `<Forecast>`.
 
-1. Inside `weather-app/src/index.js`, above the `<App>` component, add a temporary placeholder for the city search. We will add input box and button later. For now, just add some text:
+1. Inside `weather-app/src/main.jsx`, above the `<App>` component, add a temporary placeholder for the city search. We will add input box and button later. For now, just add some text:
 
    ```jsx
    const SearchBar = () => <div>city search</div>;
@@ -282,7 +283,7 @@ Next we will add the 2 components that will make up our app: `<SearchBar>` and `
 
 1. Render the `<SearchBar>` and `<Forecast>` component inside the `<App>` component:
 
-   Inside `weather-app/src/index.js`:
+   Inside `weather-app/src/main.jsx`:
 
    ```jsx
    // const SearchBar = ...
@@ -332,17 +333,17 @@ To accomplish the above points, we will use 2 react hooks:
 
 Now that we know how and where we will store the data, we have to add the code to call our weather API!
 
-In our express server, we used [node-fetch](https://github.com/node-fetch/node-fetch) to call the here and openweathermap APIs. Modern browsers already include the [fetch api](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) that we can use to call our express weather API 🚀!
+In our express server, we used [fetch](https://developer.mozilla.org/en-US/docs/Web/API/fetch) to call the geo-coding and weather APIs. We can also use [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) also works on the browser to call our express weather API 🚀!
 
 1. Fetch the weather data with a fixed city, i.e. `"Annecy"`.
 
-   We configured our react development server to "proxy" any missing URLs to our express server. Make sure the server is running.
+   We configured our react development server to "proxy" URLs starting with `/api` to our express server. Make sure the server is running.
 
    In a **new terminal window**, inside the `weather` directory, start the express server if it is not running using `npm run dev` or `node app.js` depending if you added a "dev" script in the `package.json`.
 
 1. Inside the `<App>` component, add a call to the `useState` hook to create "state" that will store the weather API results:
 
-   In `weather-app/src/index.js`:
+   In `weather-app/src/main.jsx`:
 
    ```jsx
    const App = () => {
@@ -363,7 +364,7 @@ In our express server, we used [node-fetch](https://github.com/node-fetch/node-f
 
 1. Add an `async` function into the `<App>` component that fetches the weather for a city.
 
-   In `weather-app/src/index.js`:
+   In `weather-app/src/main.jsx`:
 
    ```javascript
    const App = () => {
@@ -387,7 +388,7 @@ In our express server, we used [node-fetch](https://github.com/node-fetch/node-f
 
    We can ask react to call a function when a component is rendered for the fist time with `useEffect(doSomething, [])`. The second parameter, the empty `[]` array tells react to call this function on the first time the component is rendered (or "mounted"). See the [documentation](https://reactjs.org/docs/hooks-reference.html#conditionally-firing-an-effect) for details.
 
-   Inside `weather-app/src/index.js`, add the code to call our api on the first time the the `<App>` component is rendered:
+   Inside `weather-app/src/main.jsx`, add the code to call our api on the first time the the `<App>` component is rendered:
 
    ```jsx
    const App = () => {
@@ -453,7 +454,7 @@ In HTML, we would create a simple search bar like so:
 
 1. Update the `<SearchBar>` component to render the above form:
 
-   Inside `weather-app/src/index.js`:
+   Inside `weather-app/src/main.jsx`:
 
    ```jsx
    const SearchBar = () => (
@@ -532,11 +533,11 @@ Or we can use some **preconfigured styling**.
 
    - Bootstrap requires [popper.js](https://popper.js.org/), but it is not installed automatically. Therefor, we must install it explicitly.
 
-1. Add bootstrap to `src/index.js`:
+1. Add bootstrap to `src/main.jsx`:
 
    ```javascript
    import React, { useReducer } from "react";
-   import ReactDOM from "react-dom";
+   import ReactDOM from "react-dom/client";
    import "bootstrap/dist/css/bootstrap.min.css";
    import "bootstrap";
    ```
