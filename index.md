@@ -54,13 +54,13 @@ Here you will find resources for the CPINFO-22 web dev course.
 - ### [Module 4: NoSQL](m1/group-activity#5-sql-vs-nosql-)
   - Advantages / Disadvantages
 
-<!--
 ---
 
 ## Module 5: React
 
 ### 👩‍🔧 [React](m5/react-weather)
 
+<!--
 ---
 
 ## Final Exam
