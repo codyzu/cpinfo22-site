@@ -247,3 +247,7 @@ th, td {
         </tr>
     </tbody>
 </table>
+
+# Scaling
+
+![scaling](images/scaling.jpg)
