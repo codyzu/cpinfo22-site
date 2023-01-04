@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: " en-US" }}">
+<html lang="{{ site.lang | default: ' en-US' }}">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>{{ site.title }} - {{ page.title }}</title>
-  <link rel="stylesheet" href="{{ "/assets/css/stylesheet.css" | relative_url }}">
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/stylesheet.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
   <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
-  <link rel="icon" href="{{ "/favicon.svg" | relative_url }}" type="image/svg+xml">
-  <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
-  <script defer src="{{ "/assets/js/copy.js" | relative_url }}"></script>
+  <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
+  <script defer src="{{ '/assets/js/copy.js' | relative_url }}"></script>
   <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.js"></script>
   <style lang='windi'>
     a {
-      @apply text-sky-600 hover:text-sky-400;
+      @apply text-sky-600 hover: text-sky-400;
     }
 
     h1 {
@@ -51,7 +51,7 @@
     ol {
       @apply list-decimal pl-8 mb-4;
     }
-    
+
     li {
       @apply list-item;
     }
@@ -72,7 +72,8 @@
       @apply border-gray-300 border-b-2;
     }
 
-    td,th {
+    td,
+    th {
       @apply px-3 py-1;
     }
 
@@ -85,49 +86,37 @@
     /* https://github.com/remarkablemark/remarkablemark.github.io/blob/master/_layouts/post.html */
     /* min-height ensures the copy button doesn't get cut off on 1-liner code segments */
     pre.highlight {
-      @apply
-      relative
-      font-sans
-      text-base
-      overflow-x-auto
-      min-h-[4rem];
+      @apply relative font-sans text-base overflow-x-auto min-h-[4rem];
     }
+
     pre.highlight .copy {
-      @apply 
-      text-gray-700
-      font-sans
-      text-xs
-      leading-none
-      absolute 
-      right-2 top-2 
-      opacity-0 
-      rounded-md 
-      cursor-pointer
-      flex
-      flex-col
-      items-center
-      bg-opacity-60
-      border-2
-      border-gray-700
-      backdrop-filter
-      backdrop-blur-md
-      p-1;
+      @apply text-gray-700 font-sans text-xs leading-none absolute right-2 top-2 opacity-0 rounded-md cursor-pointer flex flex-col items-center bg-opacity-60 border-2 border-gray-700 backdrop-filter backdrop-blur-md p-1;
     }
-    pre.highlight .copy:active,pre.highlight .copy:hover,pre.highlight .copy:focus {
+
+    pre.highlight .copy:active,
+    pre.highlight .copy:hover,
+    pre.highlight .copy:focus {
       @apply opacity-100;
     }
-    pre.highlight:active .copy,pre.highlight:focus .copy,pre.highlight:hover .copy {
+
+    pre.highlight:active .copy,
+    pre.highlight:focus .copy,
+    pre.highlight:hover .copy {
       @apply opacity-100;
     }
+
     .icon {
       @apply !inline-block;
     }
+
     .copy-icon {
       @apply icon-sm !inline-block;
     }
+
     .icon-clipboard {
       @apply inline-block;
     }
+
     .highlight table td:first-child pre {
       @apply text-gray-500 font-bold;
     }
@@ -136,14 +125,17 @@
 </head>
 
 <body>
-  <div class="font-sans bg-white text-gray-900 min-h-screen bg-gradient-to-br from-white to-gray-300 truncate pb-8 whitespace-normal">
+  <div
+    class="font-sans bg-white text-gray-900 min-h-screen bg-gradient-to-br from-white to-gray-300 truncate pb-8 whitespace-normal">
     <div class="w-full backdrop-filter backdrop-blur-md fixed z-20 top-0 py-4">
-      <div class="max-w-screen-lg mx-auto text-2xl font-bold px-3"><a href="{{ "/" | relative_url }}">CPINFO-22</a></div>
+      <div class="max-w-screen-lg mx-auto text-2xl font-bold px-3"><a href="{{ '/' | relative_url }}">CPINFO-22</a>
+      </div>
     </div>
     <div class="max-w-screen-lg mx-auto pt-16 break-words px-3">{{ content }}</div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" integrity="sha256-0WMZ9PF4b2hTF66Eglv/9H5Vwk6lnOG4AbmCJxo96WQ=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js"
+    integrity="sha256-0WMZ9PF4b2hTF66Eglv/9H5Vwk6lnOG4AbmCJxo96WQ=" crossorigin="anonymous"></script>
   <script>
     anchors.add();
   </script>
