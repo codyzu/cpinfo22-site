@@ -21,7 +21,7 @@ title: Java vs JavaScript
 |**Function overloading**|Yes|"kind of" with ... rest operator in args|
 |**XML + JSON**|XML is a language. XML parsing supported out of the box. JSON OK|JSON is a format (not a language). JSON is a subset of JS (is JS). XML possible via npm.|
 |**Exception Handling** (try, catch, finally)|Yes|Yes|
-|**Deployment / Scaling**|typically big server, scaled horizontally (add CPU+mem, i.e. add floors to building)|typically containerized, scaled vertically (add instances, i.e. add building to neighborhood)|
+|**Deployment / Scaling**|typically big server, scaled vertically (add CPU+mem, i.e. add floors to building)|typically containerized, scaled horizontally (add instances, i.e. add buildings to neighborhood)|
 
 # 2 What is node.js
 
