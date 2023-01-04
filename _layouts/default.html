@@ -60,6 +60,16 @@
       @apply h-1 p-0 my-4 border-0 bg-gray-300;
     }
 
+    table {
+      @apply w-full overflow-auto block;
+    }
+
+    tr {}
+
+    tr:nth-child(2n) {
+      @apply bg-gray-200;
+    }
+
     /* https://remarkablemark.org/blog/2021/06/01/add-copy-code-to-clipboard-button-to-jeyll-site/ */
     /* https://github.com/remarkablemark/remarkablemark.github.io/blob/master/_sass/_code.scss */
     /* https://github.com/remarkablemark/remarkablemark.github.io/blob/master/_layouts/post.html */
@@ -116,7 +126,7 @@
 </head>
 
 <body>
-  <div class="font-sans bg-white text-gray-900 min-h-screen bg-gradient-to-br from-white to-gray-200 truncate pb-8">
+  <div class="font-sans bg-white text-gray-900 min-h-screen bg-gradient-to-br from-white to-gray-200 truncate pb-8 whitespace-normal">
     <div class="w-full backdrop-filter backdrop-blur-md fixed z-20 top-0 py-4">
       <div class="max-w-screen-lg mx-auto text-2xl font-bold px-3"><a href="{{ "/" | relative_url }}">CPINFO-22</a></div>
     </div>
