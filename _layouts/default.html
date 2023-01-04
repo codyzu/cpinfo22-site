@@ -44,6 +44,10 @@
       @apply list-disc pl-8 mb-4;
     }
 
+    ul ul {
+      @apply list-circle;
+    }
+
     ol {
       @apply list-decimal pl-8 mb-4;
     }
@@ -64,7 +68,13 @@
       @apply w-full overflow-auto block;
     }
 
-    tr {}
+    thead {
+      @apply border-gray-300 border-b-2;
+    }
+
+    td,th {
+      @apply px-3 py-1;
+    }
 
     tr:nth-child(2n) {
       @apply bg-gray-200;
