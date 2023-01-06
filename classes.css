@@ -1,0 +1,117 @@
+.back-button {
+  --uno: "hover:(text-blue-50 transition-transform duration-300 transform scale-95 ease-out duration-150)"
+    animate-[bounce_0.8s_ease-out_2.5] keyframes-bounce flex items-center z-50 absolute left-10 top-10 p-2 pl-1 border-2 rounded-md border-blue-600 bg-blue-600 text-white border-solid font-sans transform scale-75 md:transform-none no-underline;
+}
+
+.markdown a {
+  --uno: text-sky-600 hover:text-sky-400 no-underline;
+}
+
+.markdown h1 {
+  --uno: text-3xl font-bold mb-4 mt-6 pb-2 border-b-1 border-gray-300;
+}
+
+.markdown h2 {
+  --uno: text-2xl font-bold mb-4 mt-6 pb-1 border-b-1 border-gray-300;
+}
+
+.markdown h3 {
+  --uno: text-xl font-bold mb-1 mt-4;
+}
+
+.markdown h4 {
+  --uno: text-lg font-bold mt-2;
+}
+
+.markdown p {
+  --uno: mt-0 mb-4;
+}
+
+.markdown ul {
+  --uno: list-disc pl-8 mb-4;
+}
+
+.markdown ul ul {
+  --uno: list-circle;
+}
+
+.markdown ol {
+  --uno: list-decimal pl-8 mb-4;
+}
+
+.markdown li {
+  --uno: list-item;
+}
+
+.markdown li+li {
+  --uno: mt-1;
+}
+
+.markdown hr {
+  --uno: h-1 p-0 my-4 border-0 bg-gray-300;
+}
+
+.markdown table {
+  --uno: w-full overflow-auto block;
+}
+
+.markdown thead {
+  --uno: border-gray-300 border-b-2;
+}
+
+.markdown td,
+.markdown th {
+  --uno: px-3 py-1;
+}
+
+.markdown tr:nth-child(2n) {
+  --uno: bg-gray-200;
+}
+
+/* https://remarkablemark.org/blog/2021/06/01/add-copy-code-to-clipboard-button-to-jeyll-site/ */
+/* https://github.com/remarkablemark/remarkablemark.github.io/blob/master/_sass/_code.scss */
+/* https://github.com/remarkablemark/remarkablemark.github.io/blob/master/_layouts/post.html */
+/* min-height ensures the copy button doesn't get cut off on 1-liner code segments */
+.markdown pre.highlight {
+  --uno: relative font-sans text-base overflow-x-auto min-h-[4rem];
+}
+
+.markdown pre.highlight .copy {
+  --uno: text-gray-700 font-sans text-xs leading-none absolute right-2 top-2 opacity-0 rounded-md cursor-pointer flex flex-col items-center bg-opacity-60 border-2 border-gray-700 backdrop-filter backdrop-blur-md p-1;
+}
+
+.markdown pre.highlight .copy:active,
+.markdown pre.highlight .copy:hover,
+.markdown pre.highlight .copy:focus {
+  --uno: opacity-100;
+}
+
+.markdown pre.highlight:active .copy,
+.markdown pre.highlight:focus .copy,
+.markdown pre.highlight:hover .copy {
+  --uno: opacity-100;
+}
+
+/* .markdown .icon {
+  --uno: "!inline-block";
+}
+ */
+/* .markdown .copy-icon {
+  --uno: icon-sm "!inline-block";
+} */
+
+/* .markdown .icon-clipboard {
+  --uno: inline-block;
+} */
+
+.markdown .copy-icon {
+  --uno: i-ph-clipboard-text-duotone inline-block;
+}
+
+.markdown .highlight table td:first-child pre {
+  --uno: text-gray-500 font-bold;
+}
+
+.markdown img {
+  --uno: max-w-full box-content bg-white;
+}

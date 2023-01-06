@@ -4,20 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "windicss:dev": "windicss -to assets/css/stylesheet.css --config windi.config.js --style",
-    "windicss:build": "windicss -to assets/css/stylesheet.css --config windi.config.js --style --minify",
-    "windicss:analysis": "windicss-analysis",
+    "build:css": "cp classes.css assets/css/classes.css && unocss --out-file assets/css/uno.css assets/css/classes.css '**/*.html' 'assets/**/*/js' '**/*.md' '!node_modules' '!.git' '!_site' 'assets/reveal' '!**/*-slides.md'",
     "jekyll": "docker run --rm --volume=\"$PWD:/srv/jekyll:Z\" -e JEKYLL_UID=\"$(id -u $(whoami))\" -e JEKYLL_GID=\"$(id -g $(whoami))\" jekyll/jekyll:pages jekyll build",
-    "build": "npm run windicss:build && npm run jekyll",
+    "build": "npm run build:css && npm run jekyll",
     "test": "echo $GID",
-    "dev": "nodemon -x 'npm run build && npx serve _site' -e html,md,js,css,jpg,jpeg,png,svg -i _site -i assets/css/stylesheet.css"
+    "dev": "nodemon -x 'npm run build && npx serve _site' -e html,md,js,css,jpg,jpeg,png,svg -i _site -i assets/css/uno.css -i assets/css/classes.css -i uno.css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@windicss/plugin-icons": "^1.0.2",
+    "@iconify-json/ph": "^1.1.3",
+    "@unocss/preset-uno": "^0.48.0",
+    "@unocss/transformer-directives": "^0.48.0",
     "nodemon": "^2.0.20",
-    "serve": "^14.0.1",
-    "windicss": "^3.5.6"
+    "serve": "^14.1.2",
+    "unocss": "^0.48.0"
   }
 }

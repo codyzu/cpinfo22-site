@@ -4,5 +4,6 @@ _site
 .jekyll-metadata
 vendor
 node_modules
-assets/css/stylesheet.css
+assets/css/uno.css
+assets/css/classes.css
 .DS_store
