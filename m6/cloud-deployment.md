@@ -108,7 +108,7 @@ The weather API that we created will be deployed to a Serverless Function. We wi
    1. "Do you want to use ESLint to catch probable bugs and enforce style?" **enter `n`**
    1. "Do you want to install dependencies with npm now?" **enter `n`**
 
-1. Modify your functions to use the [node.js version 16 runtime](https://firebase.google.com/docs/functions/manage-functions#set_nodejs_version).
+1. Modify your functions to use the [node.js version 18 runtime](https://firebase.google.com/docs/functions/manage-functions#set_nodejs_version).
 
    In `functions/package.json` modify the `engines` entry:
    ```
