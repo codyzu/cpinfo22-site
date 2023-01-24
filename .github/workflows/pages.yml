@@ -37,7 +37,7 @@ jobs:
       - name: Build css
         run: |
           npm install
-          npm run windicss:build
+          npm run build:css
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
