@@ -65,8 +65,8 @@ Here you will find resources for the CPINFO-22 web dev course.
 
 ## Final Exam
 
-### ☑️ [Vote](https://vote.cpinfo21.codyfactory.eu)
-[source code](https://github.com/codyzu/cpinfo21-vote)
+### ☑️ [Vote](https://vote.cpinfo22.codyfactory.eu)
+[source code](https://github.com/codyzu/cpinfo22-vote)
 
 ---
 
