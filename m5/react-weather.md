@@ -596,7 +596,7 @@ Our application only contains a single page. There are multiple ways to use reac
 
 ### Client Side Routing
 
-[React-router](https://reacttraining.com/react-router/web/guides/quick-start) allows rendering different components based on the current URL. While technically there is only one page loaded, components and the URL can change as the user clicks on links on the page. This is known as "client side routing". Client side routing often can display a "loading" screen faster than server side rending. Even if the entire time it takes to load a page is longer, the user "feels" like the page is fast.
+[React-router](https://reactrouter.com/en/main/start/overview) allows rendering different components based on the current URL. While technically there is only one page loaded, components and the URL can change as the user clicks on links on the page. This is known as "client side routing". Client side routing often can display a "loading" screen faster than server side rending. Even if the entire time it takes to load a page is longer, the user "feels" like the page is fast.
 
 ### Server side rendering
 
