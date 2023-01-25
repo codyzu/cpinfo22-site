@@ -68,6 +68,7 @@ Here you will find resources for the CPINFO-22 web dev course.
 ### ☑️ [Vote](https://vote.cpinfo22.codyfactory.eu)
 [source code](https://github.com/codyzu/cpinfo22-vote)
 
+-->
 ---
 
 ## Module 6: Cloud
@@ -76,6 +77,7 @@ Here you will find resources for the CPINFO-22 web dev course.
 
 ### 👩‍🔧 [Cloud Deployment](m6/cloud-deployment)
 
+<!--
 ---
 
 ## 📝 [Course Evaluation](https://docs.google.com/forms/d/e/1FAIpQLSdN9sArH3dR6UjxrKDFte2yGHx12-EiMwPoAdxFvPM5lhS0iw/viewform?usp=sf_link)
