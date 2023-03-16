@@ -78,7 +78,7 @@ Here you will find resources for the CPINFO-22 web dev course.
 <!--
 ---
 
-## 📝 [Course Evaluation](https://docs.google.com/forms/d/e/1FAIpQLSdN9sArH3dR6UjxrKDFte2yGHx12-EiMwPoAdxFvPM5lhS0iw/viewform?usp=sf_link)
+## 📝 [Course Evaluation](https://docs.google.com/forms/d/e/1FAIpQLSeZBGlq-ixSzk3PvoL25odTgPMBE3OIfEaD9WEYCOFPsVMdbQ/viewform?usp=sf_link)
 
 ---
 
