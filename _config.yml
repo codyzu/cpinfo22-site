@@ -33,6 +33,8 @@ github_username:  codyzu
 # theme: minima
 # plugins:
   # - jekyll-feed
+plugins:
+  - jekyll-redirect-from
 
 # https://github.com/jekyll/jekyll/issues/4619#issuecomment-191267346
 # More › http://kramdown.gettalong.org/quickref.html
