@@ -82,7 +82,7 @@ Here you will find resources for the CPINFO-22 web dev course.
 
 ---
 
-## 💥 [Hackathon](/hackathon)
+## 💥 [Hackathon](/hackathon/hackathon)
 
 ---
 
