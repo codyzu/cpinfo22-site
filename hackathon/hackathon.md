@@ -116,7 +116,7 @@ export function App() {
 
   useEffect(() => {
     async function getImage(){
-      const fetchedImage = await fetch('./public/a.png');
+      const fetchedImage = await fetch('./a.png');
       const decodedImage = await decodeImage(fetchedImage.arrayBuffer());
       console.log('decoded', decodedImage);
     }
