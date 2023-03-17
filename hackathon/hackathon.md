@@ -107,7 +107,7 @@ export default async function decode(imageBuffer) {
 Now, from your `App.jsx`, you can fetch the image files and decode them:
 
 ```jsx
-import decodeImage from './decodeImage`
+import decodeImage from './decodeImage';
 
 // ...
 
@@ -122,7 +122,7 @@ export function App() {
     }
     
     getImage();
-  }, [])
+  }, []);
 
   // ...
 }
