@@ -74,3 +74,56 @@ npm init
 npm install --save express pug lsb jimp
 ```
 
+## React Only ⚠️
+
+If you are using react, then use pngjs
+
+```bash
+npm install --save pngjs
+```
+
+Then add a file `src/decodeImage.js`:
+```js
+import { PNG } from "pngjs/browser";
+import lsb from "lsb";
+
+export default async function decode(imageBuffer) {
+  const buffer = await imageBuffer;
+  const png = await new Promise((resolve, reject) =>
+    new PNG().parse(buffer, (err, data) => {
+      if (err) {
+        return reject(err);
+      }
+
+      resolve(data);
+    })
+  );
+
+  const json = lsb.decode(png.data, (n) => n + Math.floor(n / 3));
+  return JSON.parse(json);
+}
+```
+
+Now, from your `App.jsx`, you can fetch the image files and decode them:
+
+```jsx
+import decodeImage from './decodeImage`
+
+// ...
+
+export function App() {
+  // ...
+
+  useEffect(() => {
+    async function getImage(){
+      const fetchedImage = await fetch('./public/a.png');
+      const decodedImage = await decodeImage(fetchedImage.arrayBuffer());
+      console.log('decoded', decodedImage);
+    }
+    
+    getImage();
+  }, [])
+
+  // ...
+}
+```
