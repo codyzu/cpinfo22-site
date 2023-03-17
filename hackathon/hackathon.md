@@ -127,3 +127,13 @@ export function App() {
   // ...
 }
 ```
+
+To make the imports dynamic:
+1. place all of the images in the `src`
+1. use the following glob import to get the list if images
+   ```js
+   const images = import.meta.glob('./*.png', { as: 'url', eager: true });
+   const imageUrls = Object.values(images);
+   console.log('image urls', imageUrls);
+   ```
+1. you can now fetch each `imageUrl`
