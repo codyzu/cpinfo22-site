@@ -79,11 +79,11 @@ Here you will find resources for the CPINFO-22 web dev course.
 
 ## 📝 [Course Evaluation](https://docs.google.com/forms/d/e/1FAIpQLSeZBGlq-ixSzk3PvoL25odTgPMBE3OIfEaD9WEYCOFPsVMdbQ/viewform?usp=sf_link)
 
-<!--
 ---
 
 ## 💥 [Hackathon](/hackathon/hackathon)
 
+<!--
 ---
 
 ## ⚔️ Soutenance
