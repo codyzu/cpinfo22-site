@@ -5,13 +5,15 @@ redirect_from: /hackathon
 
 # Final Hackathon
 
+<!-- TODO: use pngjs in node -->
+
 [Steganography](https://en.wikipedia.org/wiki/Steganography) [Stéganographie](https://fr.wikipedia.org/wiki/St%C3%A9ganographie)
 
 > the practice of concealing a file, message, image, or video within another file, message, image, or video - wikipedia
 
 You will need these 2 packages:
 * [lsb](https://github.com/hughsk/lsb)
-* [jimp](https://github.com/oliver-moran/jimp/tree/master/packages/jimp)
+* [pngjs](https://github.com/pngjs/pngjs)
 
 There are 5 images with data encoded in them.
 
@@ -34,17 +36,17 @@ Using these images:
 Use the following `decode()` function to decode the embedded data.
 
 ```javascript
-const jimp = require('jimp');
+const fs = require('fs');
+const PNG = require('pngjs').PNG;
 const lsb = require('lsb');
 
 async function decode(inputImage) {
-  const image = await jimp.read(inputImage);
-  const json = lsb.decode(image.bitmap.data, rgb);
-  return JSON.parse(json);
-}
+  const png = await new Promise((resolve, reject) =>
+    new PNG().parse(fs.readFileSync(inputImage), (error, data) =>
+      error ? reject(error) : resolve(data)))
 
-function rgb(n) {
-  return n + Math.floor(n / 3);
+  const json = lsb.decode(png.data, (n) => n + Math.floor(n / 3));
+  return JSON.parse(json);
 }
 
 /////////////////////////////////////////
@@ -71,15 +73,20 @@ To get started (with express):
 mkdir hackathon
 cd hackathon
 npm init
-npm install --save express pug lsb jimp
+npm install --save express pug lsb pngjs
 ```
 
-## React Only ⚠️
+## ⚠️ React Only ⚠️
 
-If you are using react, then use pngjs
+**The rest of this document is for folks doing the Hackathon with React!**
+
+
+### Decode with pngjs
+
+If you are using react, then use [pngjs](https://www.npmjs.com/package/pngjs)
 
 ```bash
-npm install --save pngjs
+npm install --save pngjs lsb
 ```
 
 Then add a file `src/decodeImage.js`:
@@ -90,13 +97,9 @@ import lsb from "lsb";
 export default async function decode(imageBuffer) {
   const buffer = await imageBuffer;
   const png = await new Promise((resolve, reject) =>
-    new PNG().parse(buffer, (err, data) => {
-      if (err) {
-        return reject(err);
-      }
-
-      resolve(data);
-    })
+    new PNG().parse(buffer, (err, data) => 
+      err ? reject(err) : resolve(data)
+    )
   );
 
   const json = lsb.decode(png.data, (n) => n + Math.floor(n / 3));
@@ -128,12 +131,16 @@ export function App() {
 }
 ```
 
-To make the imports dynamic:
-1. place all of the images in the `src`
-1. use the following glob import to get the list if images
+### Dynamic imports with vitejs
+
+To make the imports dynamic (at build time), using [vitejs glob imports](https://vitejs.dev/guide/features.html#glob-import):
+1. Place all of the images in the `src`
+1. Use the following glob import to get the list of images (ℹ️ the glob is resolved at build time of your site):
    ```js
    const images = import.meta.glob('./*.png', { as: 'url', eager: true });
    const imageUrls = Object.values(images);
    console.log('image urls', imageUrls);
    ```
-1. you can now fetch each `imageUrl`
+   - `as: 'url'` ensures that we always get the url to the image (otherwise it will be treated as a module)
+   - `eager: true` resolves the glob synchronously
+1. You can now fetch each `imageUrl`
