@@ -33,7 +33,11 @@ github_username:  codyzu
 # theme: minima
 # plugins:
   # - jekyll-feed
+# !!!! This does not seem to work !!!
 plugins:
+  - jekyll-redirect-from
+# trying this to debug why redirect doesn't work
+whitelist:
   - jekyll-redirect-from
 
 # https://github.com/jekyll/jekyll/issues/4619#issuecomment-191267346
