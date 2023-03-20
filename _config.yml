@@ -33,10 +33,9 @@ github_username:  codyzu
 # theme: minima
 # plugins:
   # - jekyll-feed
-# !!!! This does not seem to work !!!
 plugins:
   - jekyll-redirect-from
-# trying this to debug why redirect doesn't work
+# Seems to be needed with github pages
 whitelist:
   - jekyll-redirect-from
 
