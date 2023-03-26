@@ -5,7 +5,7 @@ redirect_from: /hackathon
 
 # Final Hackathon
 
-<!-- TODO: use pngjs in node -->
+<!-- TODO: CRA dynamic imports -->
 
 [Steganography](https://en.wikipedia.org/wiki/Steganography) [Stéganographie](https://fr.wikipedia.org/wiki/St%C3%A9ganographie)
 
