@@ -84,6 +84,7 @@ Here you will find resources for the CPINFO-22 web dev course.
 ## 💥 [Hackathon](/hackathon/hackathon)
 
 📈 [Final Grades](https://docs.google.com/spreadsheets/d/e/2PACX-1vTo7ZODYocvxsnSTlVYqKdkcPF6ckR8114hWtJpYjbVUJXK2DepEXB1AKVqR_3Tf7u6L-VxSZmwwJAB/pubchart?oid=1140012088&format=interactive)
+
 <!--
 ---
 
