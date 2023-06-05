@@ -85,7 +85,6 @@ Here you will find resources for the CPINFO-22 web dev course.
 
 📈 [Final Grades](https://docs.google.com/spreadsheets/d/e/2PACX-1vTo7ZODYocvxsnSTlVYqKdkcPF6ckR8114hWtJpYjbVUJXK2DepEXB1AKVqR_3Tf7u6L-VxSZmwwJAB/pubchart?oid=1140012088&format=interactive)
 
-<!--
 ---
 
 ## ⚔️ Soutenance
@@ -93,7 +92,6 @@ Here you will find resources for the CPINFO-22 web dev course.
 - Architecture diagram (client, server, database, cloud services, etc)
 - Problems, solutions, advantages, disadvantages of technologies (cloud services, NoSQL, react, etc)
 - How do you deploy your site? Where is the source code stored? Do you have automatic tests?
-- Problems encountered
 - Comparison of the technologies with PHP, Java, C# or others
-- What would you do differently if you could do the project again?
--->
+- Problems encountered (and solution found)
+- What would you do differently if you could do the project again (positive spin)?
