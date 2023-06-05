@@ -93,5 +93,5 @@ Here you will find resources for the CPINFO-22 web dev course.
 - Problems, solutions, advantages, disadvantages of technologies (cloud services, NoSQL, react, etc)
 - How do you deploy your site? Where is the source code stored? Do you have automatic tests?
 - Comparison of the technologies with PHP, Java, C# or others
-- Problems encountered (and solution found)
+- Problems encountered (and solutions found)
 - What would you do differently if you could do the project again (positive spin)?
